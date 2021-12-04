@@ -32,6 +32,16 @@ The swiss army knife for location data. https://www.gpsbabel.org/
 To eleminate the google location wifi with wrong/old/moving positon erros (rays
 into the world in the maps, FIXME map) i need to find and remove them.
 
+![switching to an old geo location of a mobile wifi2gsm router](readme-assets/google-wifi-location-wrong.png)
+
+Die meisten Fehler beruhen anscheinend auf Standorten, die Wifis zugeordnet
+sind. Tauchen diese in der Netzwerkliste auf, wird deren (von Google irgendwann
+mal gespeicherte) Position eingetragen.
+
+Dem kann ich nur Herr werden, wenn ich Wert für Wert vergleiche und Werte mit
+zu großem Abstand wegschmeisse oder markiere.
+
+
 I think i will try to calculate the distance to the last position and remove
 them if the next position is more than FIXME km away.  Will try to use
 [find-distance-between-2-ips-using-bash](https://blog.ip2location.com/knowledge-base/find-distance-between-2-ips-using-bash/)
@@ -51,12 +61,6 @@ for i in 11 12 13 14 15 16 17 18 19 20 21 ; do echo -e "Now computing 20${i}" ; 
 
 ## findings
 
-Die meisten Fehler beruhen anscheinend auf Standorten, die Wifis zugeordnet
-sind. Tauchen diese in der Netzwerkliste auf, wird deren (von Google irgendwann
-mal gespeicherte) Position eingetragen.
-
-Dem kann ich nur Herr werden, wenn ich Wert für Wert vergleiche und Werte mit
-zu großem Abstand wegschmeisse oder markiere.
 
 ### Ausreisser finden (manuell)
 
