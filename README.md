@@ -41,7 +41,10 @@ If there are multiple occurencies of the same (wrong) spot, i delete all of them
 
 This needs A LOT of time, but the maps are much better after that.
 
+#### Original data
 ![compare unclear map](readme-assets/before-cleaning.png)
+
+#### Cleaned data
 ![compare clear map](readme-assets/after-cleaning.png)
 
 The script is still dangerous: [load-trackfile.sh](bin/load-trackfile.sh) I
