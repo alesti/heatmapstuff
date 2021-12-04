@@ -26,26 +26,28 @@ You need to mention the [openstreetmap copyright](https://www.openstreetmap.org/
 
 The swiss army knife for location data. https://www.gpsbabel.org/
 
-
 ### calculate distances between geocoordinates
 
-To eleminate the google location wifi with wrong/old/moving positon erros (rays
-into the world in the maps, FIXME map) i need to find and remove them.
+To eliminate the lazy (batterysafe) location aquisition by 'known' gsm and wifi
+locations (with often wrong/old/moving positions) which create this anyoing rays into nowhere
+i needed to find and remove them.
 
 ![switching to an old geo location of a mobile wifi2gsm router](readme-assets/google-wifi-location-wrong.png)
 
-Die meisten Fehler beruhen anscheinend auf Standorten, die Wifis zugeordnet
-sind. Tauchen diese in der Netzwerkliste auf, wird deren (von Google irgendwann
-mal gespeicherte) Position eingetragen.
+I started to compute the distance between the neighbor trackpoints and remove
+the 2nd if it is more than 15km away from the 1st.
 
-Dem kann ich nur Herr werden, wenn ich Wert für Wert vergleiche und Werte mit
-zu großem Abstand wegschmeisse oder markiere.
+If there are multiple occurencies of the same (wrong) spot, i delete all of them. Afterwards i restart the script.
 
+This needs A LOT of time, but the maps are much better after that.
 
-I think i will try to calculate the distance to the last position and remove
-them if the next position is more than FIXME km away.  Will try to use
-[find-distance-between-2-ips-using-bash](https://blog.ip2location.com/knowledge-base/find-distance-between-2-ips-using-bash/)
-for that.
+![compare unclear map](readme-assets/before-cleaning.png)
+![compare clear map](readme-assets/after-cleaning.png)
+
+The script is still dangerous: [load-trackfile.sh](bin/load-trackfile.sh) I
+used [bc|bash implementation](http://rosettacode.org/wiki/Haversine_formula#bc)
+of [the haversine formula](https://en.wikipedia.org/wiki/Haversine_formula) to compute the distances.
+
 
 ## running software
 
