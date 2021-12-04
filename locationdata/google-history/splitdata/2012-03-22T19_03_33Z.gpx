@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<gpx xmlns="http://www.topografix.com/GPX/1/0" version="1.0" creator="GPSBabel - https://www.gpsbabel.org">
+  <time>2021-12-03T18:48:29.460Z</time>
+  <bounds minlat="-8.730501500" minlon="-123.134541400" maxlat="71.027788300" maxlon="126.639353200"/>
+  <metadata><time>2012-03-22T19:03:33Z</time><bounds minlat="53.576668000" minlon="9.999182000" maxlat="53.594751000" maxlon="9.974590000"/></metadata><trk>
+    <name>ACTIVE LOG # 20120322</name>
+    <trkseg>
+      <trkpt lat="53.576668000" lon="9.974590000">
+        <ele>0.000</ele>
+        <time>2012-03-22T07:26:45Z</time>
+      </trkpt>
+      <trkpt lat="53.577101200" lon="9.974907700">
+        <ele>0.000</ele>
+        <time>2012-03-22T07:36:29Z</time>
+      </trkpt>
+      <trkpt lat="53.594751000" lon="9.999182000">
+        <ele>0.000</ele>
+        <time>2012-03-22T18:53:18Z</time>
+      </trkpt>
+      <trkpt lat="53.594751000" lon="9.999182000">
+        <ele>0.000</ele>
+        <time>2012-03-22T18:53:32Z</time>
+      </trkpt>
+      <trkpt lat="53.594751000" lon="9.999182000">
+        <ele>0.000</ele>
+        <time>2012-03-22T19:03:33Z</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+  </gpx>
