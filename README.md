@@ -54,12 +54,12 @@ If there are multiple occurencies of the same (wrong) spot, i delete all of them
 This needs A LOT of time, but the maps are much better after that.
 
 #### Original google locationdata from 2016-03-14
-![compare unclear map](readme-assets/before-cleaning_sm.png | width=400)
+![compare unclear map](readme-assets/before-cleaning_sm.png)
 
 #### Cleaned data 2016-03-14
 
 heatmap.py creates the map section on its own, so it is smaller.
-![compare clear map](readme-assets/after-cleaning_sm.png | width=400)
+![compare clear map](readme-assets/after-cleaning_sm.png)
 
 The script is still dangerous: [load-trackfile.sh](bin/load-trackfile.sh) I
 used [bc|bash implementation](http://rosettacode.org/wiki/Haversine_formula#bc)
