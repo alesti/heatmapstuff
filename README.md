@@ -6,9 +6,10 @@ data which are collected by my mobile.
 
 I am interested in plotting all my moves into a map, in a best scenario as a heatmap.
 
-That worked out fine with manually created (e.g. gps device) data, but very bad
-with google location data and i poked around to find if it is possible to fix
-them (semi)automated.
+That worked out [fine with manually created (e.g. gps device)
+data](https://leben-auf-dem-boden.de/wordpress/wp-content/uploads/2021/12/2021-11-bike.png),
+but very bad with google location data and i poked around to find if it is
+possible to fix them (semi)automated.
 
 As far as i tested, it is not.
 
@@ -57,17 +58,25 @@ Needs [this patch](https://github.com/sethoscope/heatmap/pull/62) to work with r
 
 Makes nice heatmaps, if you do **not** use google location data but real gps data.
 
+
 ```
 OSMBASE=https://tiles.wmflabs.org/bw-mapnik
 ./heatmap.py -B 0.15 -o 2021.png --osm --osm_base $OSMBASE -H 2400 --margin 50 --decay 0.90 ~/gd_local/Meine\ Tracks/tracks/2021/2021-11 ~/gd_local/Meine\ Tracks/tracks/2021/2021-11-
 ```
+
+If you combine real and google guessed data, it might look like this one:
+![bike rides and location data combined](https://leben-auf-dem-boden.de/wordpress/wp-content/uploads/2021/12/2021-09..10-bike.png)
+
+I was in fact on the island Amrum, but not on Föhr or Sylt, but my mobile connected to gsm
+antennas there, i used the train to Schleswig and from Husum, and the train
+used the railway as mapped, not the plot printed by the gsm connections. 
 
 ### OSM tile server 
 
 Heatmap.py uses OSM for the map layer, there are a lot of possible maps out there, take a look at
 [OSM tile servers listing](https://wiki.openstreetmap.org/wiki/Tile_servers) to compare and find the suitable for your needs.
 
-I like https://tiles.wmflabs.org/bw-mapnik (bw, free)
+I like https://tiles.wmflabs.org/bw-mapnik (bw, free - used by the example maps)
 
 You need to mention the [openstreetmap copyright](https://www.openstreetmap.org/copyright) if you using OSM map tiles!
 
@@ -77,11 +86,12 @@ If you get your google location history via [google
 takeout](https://takeout.google.com/}, use the kml export if you want to use
 the typical gis tools and not the json export (which is default).
 
-This nice script splits your kml into days.
+This nice script converts kml into gpx.
 
 [google-location-history-to-gpx](https://gist.github.com/juliushaertl/743704745b953fb54f9fca27ed124078)
 
 ### gpsbabel
 
 The swiss army knife for location data. https://www.gpsbabel.org/
+Used it to split the all.gpx file in daily files.
 
