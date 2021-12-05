@@ -15,7 +15,7 @@ As far as i tested now, it is not (easy) possible:
 ### Unclear location data: Calculate distances between geocoordinates
 
 To eliminate the lazy (batterysafe) location aquisition by 'known' gsm and wifi
-locations (with often wrong/old/moving positions) which create this anyoing rays into nowhere
+locations (with often wrong/old/moving positions) which create [this anyoing rays into nowhere](maps/googlelocation.png)
 i needed to find and remove them.
 
 > It is interesting to know that i do know in deed some of the 'nowhere'
