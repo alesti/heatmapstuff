@@ -1,23 +1,36 @@
-# heatmapstuff
-struggle with locationdata :-)
+# heatmapstuff - struggle with locationdata 
 
 I started to play with location data and remembered my google location
-data which are collected by my mobile.
+data which are collected since 2011 by my mobile.
 
-I am interested in plotting all my moves into a map, in a best scenario as a heatmap.
+I was interested in plotting all my moves into a map, in a best scenario as a heatmap.
 
 That worked out [fine with manually created (e.g. gps device)
 data](https://leben-auf-dem-boden.de/wordpress/wp-content/uploads/2021/12/2021-11-bike.png),
-but very bad with google location data and i poked around to find if it is
-possible to fix them (semi)automated.
+but very bad with google location data. I poked around to find if it is
+possible to fix the errors (semi)automated.
 
-As far as i tested, it is not.
+As far as i tested now, it is not (easy) possible:
 
 ### Unclear location data: Calculate distances between geocoordinates
 
 To eliminate the lazy (batterysafe) location aquisition by 'known' gsm and wifi
 locations (with often wrong/old/moving positions) which create this anyoing rays into nowhere
 i needed to find and remove them.
+
+It is interesting to know that i do know in deed some of the 'nowhere'
+locations. :-) One (shown in the 1st map) is the location where i used a mobile
+wifi2gsm router at the first time. It looks like google acquires the position
+of a new, never noted wifi through a connected device with position (my mobile
+with gps chip) and connects this position to the ESSID/Mac of the wifi network
+in a database and does not take into account that wifis may move.
+
+I had some similar cases years ago, one in [train with
+wifi](https://www.facebook.com/photo.php?fbid=1347765448587142&set=pb.100000610990660.-2207520000..&type=3) and
+one as we moved into a new flat - we ware able to hack a [ingress portal](https://ingress.com/) located just
+in front of the old flat, if we where connected to the (same) wifi hardware in the new flat. 
+
+I consider that this is a known problem to google, but they dont care.
 
 I started to compute the distance between the neighbor trackpoints with the
 [haversine formula](https://en.wikipedia.org/wiki/Haversine_formula) to compute
@@ -61,15 +74,17 @@ Makes nice heatmaps, if you do **not** use google location data but real gps dat
 
 ```
 OSMBASE=https://tiles.wmflabs.org/bw-mapnik
-./heatmap.py -B 0.15 -o 2021.png --osm --osm_base $OSMBASE -H 2400 --margin 50 --decay 0.90 ~/gd_local/Meine\ Tracks/tracks/2021/2021-11 ~/gd_local/Meine\ Tracks/tracks/2021/2021-11-
+./heatmap.py -B 0.35 -o 2021-11.png --osm --osm_base $OSMBASE -H 2400 --margin 50 --decay 0.90 ~/gd_local/tracks/2021/2021-11
 ```
 
-If you combine real and google guessed data, it might look like this one:
+If you combine real and google guessed data, it might look like this one (click to enlarge):
+
 ![bike rides and location data combined](https://leben-auf-dem-boden.de/wordpress/wp-content/uploads/2021/12/2021-09..10-bike.png)
 
 I was in fact on the island Amrum, but not on Föhr or Sylt, but my mobile connected to gsm
-antennas there, i used the train to Schleswig and from Husum, and the train
+antennas there; and i used the train to Schleswig and from Husum, and the train
 used the railway as mapped, not the plot printed by the gsm connections. 
+The trains from Cuxhaven and Lübeck did it better :-) 
 
 ### OSM tile server 
 
