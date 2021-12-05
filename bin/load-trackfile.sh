@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 #
-
 # maximal allowed distance in m (15km)
-maxdist=15000
+maxdist=25000
 logfile=/tmp/trackmunging.log
 
 # logfile
@@ -12,21 +11,22 @@ touch $logfile
 
 echo "Importing trackpoints from $1 - this needs some time"
 unset coords
+IFS=$'\n'  # need the whole line
 # example line
 #      <trkpt lat="54.757862600" lon="11.461799800">
-IFS=$'\n'
 while read line  
 do 
   coords+=($(echo $line | grep '<trkpt'| sed -e 's/.*<trkpt lat="//' -e 's/" lon="/ /' -e 's/">//')) 
 done < $1 
 
-# search for dupes
+# search for dupes? 
 #echo "Checkin dupes:" >> $logfile
 #printf '%s\n' "${coords[@]}"|awk '!($0 in seen){seen[$0];next} 1' >> $logfile
 
 elements=${#coords[*]}
 echo -e "We have $elements trackpoints in this file. Calculating distances...\n"
 
+# we need two points to calculate a diff
 # check if uneven, discard last element
 if [[ $((elements % 2)) -eq 0 ]]; then
   :
@@ -68,5 +68,3 @@ do
  n=n+1
 
 done
-
-
