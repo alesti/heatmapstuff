@@ -45,7 +45,7 @@ them. Afterwards i restart the script for a new run (by a while loop).
 This needs A LOT of time, but the maps are much better after that... 
 
 **... as long as there is no real distance in the track which has really no
-position for a longer time.**  
+position for a longer distance.**  
 That happens for instance if you going on a
 seagoing ferry to ride to Bornholm or a simple flight. :-(
 
