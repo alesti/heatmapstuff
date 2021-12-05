@@ -18,19 +18,19 @@ To eliminate the lazy (batterysafe) location aquisition by 'known' gsm and wifi
 locations (with often wrong/old/moving positions) which create this anyoing rays into nowhere
 i needed to find and remove them.
 
-It is interesting to know that i do know in deed some of the 'nowhere'
-locations. :-) One (shown in the 1st map) is the location where i used a mobile
-wifi2gsm router at the first time. It looks like google acquires the position
-of a new, never noted wifi through a connected device with position (my mobile
-with gps chip) and connects this position to the ESSID/Mac of the wifi network
-in a database and does not take into account that wifis may move.
-
-I had some similar cases years ago, one in [train with
+> It is interesting to know that i do know in deed some of the 'nowhere'
+> locations. :-) One (shown in the 1st map pictured below) is the location where i used a mobile
+> wifi2gsm router at the first time. It looks like google acquires the position
+> of a new, never noted wifi through a connected device with position (my mobile
+> with gps chip) and connects this position to the ESSID/Mac of the wifi network
+> in a database and does not take into account that wifis may move.
+>
+> I had some similar cases years ago, one in [train with
 wifi](https://www.facebook.com/photo.php?fbid=1347765448587142&set=pb.100000610990660.-2207520000..&type=3) and
-one as we moved into a new flat - we ware able to hack a [ingress portal](https://ingress.com/) located just
-in front of the old flat, if we where connected to the (same) wifi hardware in the new flat. 
-
-I consider that this is a known problem to google, but they dont care.
+> one as we moved into a new flat - we ware able to hack a [ingress portal](https://ingress.com/) located just
+> in front of the old flat, if we where connected to the (same) wifi hardware in the new flat. 
+>
+>I consider that this is a known problem to google, but they dont care.
 
 I started to compute the distance between the neighbor trackpoints with the
 [haversine formula](https://en.wikipedia.org/wiki/Haversine_formula) to compute
