@@ -15,8 +15,9 @@ As far as i tested now, it is not (easy) possible:
 ### Unclear location data: Calculate distances between geocoordinates
 
 To eliminate the lazy (batterysafe) location aquisition by 'known' gsm and wifi
-locations (with often wrong/old/moving positions) which create [this anyoing rays into nowhere](maps/googlelocation.png)
-i needed to find and remove them.
+locations (with often wrong/old/moving positions) which create [this anoying
+rays into nowhere (scroll!)](maps/googlelocation.png) i needed to find and
+remove them.
 
 > It is interesting to know that i do know in deed some of the 'nowhere'
 > locations. :-) One (shown in the 1st map pictured below) is the location where i used a mobile
@@ -41,11 +42,14 @@ is more than 15km away from the 1st position.
 If there are multiple occurencies of the same (wrong) spot, i delete all of
 them. Afterwards i restart the script for a new run (by a while loop).
 
-This needs A LOT of time, but the maps are much better after that... as long as
-there is no real distance in the track which has really no position for a longer time.
-That happens for instance if you going on a seagoing ferry to ride to Bornholm. :-( 
+This needs A LOT of time, but the maps are much better after that... 
 
-So - been there, done that. No solution so far. Project stopped.
+**... as long as there is no real distance in the track which has really no
+position for a longer time.**  
+That happens for instance if you going on a
+seagoing ferry to ride to Bornholm or a simple flight. :-(
+
+**So - been there, done that. No solution so far. Project stopped.**
 
 But you might be interested anyhow, so take a look.
 
