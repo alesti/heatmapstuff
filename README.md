@@ -47,15 +47,21 @@ That happens for instance if you going on a seagoing ferry to ride to Bornholm. 
 
 So - been there, done that. No solution so far. Project stopped.
 
-But you might be interestet, so take a look.
+But you might be interested anyhow, so take a look.
 
-#### Original google locationdata from 2016-03-14
+#### Plot with untouched google locationdata from 2016-03-14
 ![compare unclear map](readme-assets/before-cleaning_sm.png)
 
-#### Cleaned data 2016-03-14
+We used a portable wifi2gsm router in denmark (2016 had still expensive roaming
+fees, we bought one dk sim card and used it together in the car). One of the
+offtrack locations is the [sheep farm](https://www.schaeferei-hullerbusch.de/)
+of a friend where i used the same device the first time (years before 2016).
+
+#### Plot with cleaned data 2016-03-14
 
 heatmap.py creates the map section on its own, so it is smaller.
 ![compare clear map](readme-assets/after-cleaning_sm.png)
+
 
 The script is still dangerous: [load-trackfile.sh](bin/load-trackfile.sh) -
 have a copy of your precious data before tinkering around with it!
