@@ -28,8 +28,8 @@ remove them.
 >
 > I had some similar cases years ago, one in [train with
 wifi](https://www.facebook.com/photo.php?fbid=1347765448587142&set=pb.100000610990660.-2207520000..&type=3) and
-> one as we moved into a new flat - we ware able to hack a [ingress portal](https://ingress.com/) located just
-> in front of the old flat, if we where connected to the (same) wifi hardware in the new flat. 
+> one as we moved into a new flat - we have been able to hack a [ingress portal](https://ingress.com/) located just
+> in front of the old flat, if we have been connected to the (same) wifi hardware in the new flat. 
 >
 >I consider that this is a known problem to google, but they dont care.
 
@@ -45,7 +45,7 @@ them. Afterwards i restart the script for a new run (by a while loop).
 This needs A LOT of time, but the maps are much better after that... 
 
 **... as long as there is no real distance in the track which has really no
-position for a longer distance.**  
+position for a longer distance.**
 That happens for instance if you going on a
 seagoing ferry to ride to Bornholm or a simple flight. :-(
 
