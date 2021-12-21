@@ -128,6 +128,7 @@ I use [imagemagick](https://imagemagick.org/script/index.php) to add the osm cop
 ## favorite configurations - personal notes
 
 With `OSMBASE=http://c.tile.stamen.com/toner` the background brightness `-B 0.15` shows clearly water but is not too bright, e.g. `OSMBASE=http://c.tile.stamen.com/toner OUT=../tmp/2021-12.png ; ./heatmap.py -e 53.55,9.85,53.44,10.08  -B 0.15 -o $OUT  --osm --osm_base $OSMBASE -H 2400 --margin 100 --decay 0.90 ~/gd_local/Meine\ Tracks/tracks/2021/2021-12-*`
+![toner tiles for black water](readme-assets/toner-tiles_sm.png)
 
 I like `OSMBASE=https://tiles.wmflabs.org/bw-mapnik` most, but it shows deep water in different shadings, this is at least in Hamburg not easy to view. I use a background brightness `-B 0.35` for that tileserver - there is no (easy to reach) limit in tile loading.
 
