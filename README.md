@@ -89,7 +89,7 @@ OSMBASE=https://tiles.wmflabs.org/bw-mapnik
 
 If you combine real and google guessed data, it might look like this one (click to enlarge):
 
-![bike rides and location data combined](https://leben-auf-dem-boden.de/wordpress/wp-content/uploads/2021/12/2021-09..10-bike.png)
+![bike rides and location data combined](https://leben-auf-dem-boden.de/wordpress/wp-content/uploads/2021/12/2021-09..10-bike-c.png)
 
 I was in fact on the island Amrum, but not on Föhr or Sylt, but my mobile connected to gsm
 antennas there; and i used the train to Schleswig and from Husum, and the train
