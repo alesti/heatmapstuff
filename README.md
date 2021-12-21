@@ -104,6 +104,7 @@ Heatmap.py uses OSM for the map layer, there are a lot of possible maps out ther
 I like https://tiles.wmflabs.org/bw-mapnik (bw, free - used by the example maps)
 
 You need to mention the [openstreetmap copyright](https://www.openstreetmap.org/copyright) if you using OSM map tiles!
+See a solution at further down.
 
 ### splitting google-location-history in single day files
 
@@ -120,9 +121,12 @@ This nice script converts kml into gpx.
 The swiss army knife for location data. https://www.gpsbabel.org/
 Used it to split the all.gpx file in daily files.
 
-## favorite configurations
+## favorite configurations - personal notes
 
 With `OSMBASE=http://c.tile.stamen.com/toner` the background brightness `-B 0.15` shows clearly water but is not too bright. (only a few calls per time possible due the tile provider). e.g. `OSMBASE=http://c.tile.stamen.com/toner OUT=../tmp/2021-12.png ; ./heatmap.py -e 53.55,9.85,53.44,10.08  -B 0.15 -o $OUT  --osm --osm_base $OSMBASE -H 2400 --margin 100 --decay 0.90 ~/gd_local/Meine\ Tracks/tracks/2021/2021-12-*`
 
 I like `OSMBASE=https://tiles.wmflabs.org/bw-mapnik`, but it shows water in different shadings, this is at least in Hamburg not easy to view. I use a background brightness `-B 0.35` for that tileserver - there is no (easy to reach) limit in tile loading.
 
+I use [imagemagick](https://imagemagick.org/script/index.php) to add the osm copyright - for the toner tiles from c.tile.stamen.com i like `grey40` as font color, i use their (c) string and push it in to the right bottom corner with `convert -font helvetica -fill grey40 -pointsize 30 -gravity SouthEast -draw "text 20,20 'Map tiles by Stamen Design, under CC BY 3.0 Data by OpenStreetMap, under ODbL '" tmp/2021-12-3.png tmp/2021-12-crights.png`.
+
+I need to compute the right position in the right down corner with imagemagicks identify... 
