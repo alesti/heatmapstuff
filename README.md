@@ -6,7 +6,7 @@ data which are collected since 2011 by my mobile.
 I was interested in plotting all my moves into a map, in a best scenario as a heatmap.
 
 That worked out [fine with manually created (e.g. gps device)
-data](https://leben-auf-dem-boden.de/wordpress/wp-content/uploads/2021/12/2021-11-bike.png),
+data](https://leben-auf-dem-boden.de/wordpress/wp-content/uploads/2021/12/2021-11-bike-c.png)
 but very bad with google location data. I poked around to find if it is
 possible to fix the errors (semi)automated.
 
