@@ -12,7 +12,7 @@ possible to fix the errors (semi)automated.
 
 As far as i tested now, it is not (easy) possible:
 
-### Unclear location data: Calculate distances between geocoordinates
+## Unclear location data: Calculate distances between geocoordinates
 
 To eliminate the lazy (batterysafe) location aquisition by 'known' gsm and wifi
 locations (with often wrong/old/moving positions) which create [this anoying
@@ -53,7 +53,7 @@ seagoing ferry to ride to Bornholm or a simple flight. :-(
 
 But you might be interested anyhow, so take a look.
 
-#### Plot with untouched google locationdata from 2016-03-14
+### Plot with untouched google locationdata from 2016-03-14
 ![compare unclear map](readme-assets/before-cleaning_sm.png)
 
 We used a portable wifi2gsm router in denmark (2016 had still expensive roaming
@@ -61,7 +61,7 @@ fees, we bought one dk sim card and used it together in the car). One of the
 offtrack locations is the [sheep farm](https://www.schaeferei-hullerbusch.de/)
 of a friend where i used the same device the first time (years before 2016).
 
-#### Plot with cleaned data 2016-03-14
+### Plot with cleaned data 2016-03-14
 
 heatmap.py creates the map section on its own, so it is smaller.
 ![compare clear map](readme-assets/after-cleaning_sm.png)
@@ -119,4 +119,10 @@ This nice script converts kml into gpx.
 
 The swiss army knife for location data. https://www.gpsbabel.org/
 Used it to split the all.gpx file in daily files.
+
+## favorite configurations
+
+With `OSMBASE=http://c.tile.stamen.com/toner` the background brightness `-B 0.15` shows clearly water but is not too bright. (only a few calls per time possible due the tile provider). e.g. `OSMBASE=http://c.tile.stamen.com/toner OUT=../tmp/2021-12.png ; ./heatmap.py -e 53.55,9.85,53.44,10.08  -B 0.15 -o $OUT  --osm --osm_base $OSMBASE -H 2400 --margin 100 --decay 0.90 ~/gd_local/Meine\ Tracks/tracks/2021/2021-12-*`
+
+I like `OSMBASE=https://tiles.wmflabs.org/bw-mapnik`, but it shows water in different shadings, this is at least in Hamburg not easy to view. I use a background brightness `-B 0.35` for that tileserver - there is no (easy to reach) limit in tile loading.
 
